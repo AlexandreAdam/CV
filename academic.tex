@@ -1,0 +1,98 @@
+% =============================
+% Academic CV Template (LaTeX)
+% With horizontal rules below section titles
+% =============================
+
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+% --- Section formatting ---
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.2ex plus .2ex}{0.8ex}
+
+% --- Custom commands ---
+\newcommand{\cvsection}[1]{\section*{#1}}
+\newcommand{\cvsubsection}[1]{\subsection*{#1}}
+\newcommand{\years}[1]{\textit{#1}} % For year ranges
+
+% =============================
+\begin{document}
+
+% --- Header ---
+\begin{center}
+  {\LARGE Your Full Name} \\[4pt]
+  \href{mailto:you@university.edu}{you@university.edu} $\vert$ (+1) 555-123-4567 \\
+  Department of XYZ, Prestigious University \\
+  \href{https://your-website.example}{your-website.example} $\vert$ ORCID: 0000-0000-0000-0000
+\end{center}
+
+\vspace{1em}
+
+% --- Education ---
+\cvsection{Education}
+\textbf{Ph.D., Field of Study}, University Name, City, Country \hfill \years{2018--2024} \\
+Dissertation: ``Title of Dissertation'' (Advisor: Prof. X)
+
+\textbf{M.Sc., Field of Study}, University Name, City, Country \hfill \years{2016--2018}
+
+\textbf{B.Sc., Field of Study}, University Name, City, Country \hfill \years{2012--2016}
+
+% --- Research Interests ---
+\cvsection{Research Interests}
+High-dimensional inference; diffusion models; stochastic differential equations; Bayesian methods; applications to astronomy and physics.
+
+% --- Research Experience ---
+\cvsection{Research Experience}
+\textbf{Graduate Research Assistant}, University Name, Lab/Group \hfill \years{2018--2024} \\
+Advisor: Prof. X \\
+\begin{itemize}[leftmargin=*]
+  \item Developed methods for XYZ, resulting in N first-author publications.
+  \item Collaborated with international teams on project ABC.
+\end{itemize}
+
+% --- Teaching Experience ---
+\cvsection{Teaching Experience}
+\textbf{Teaching Assistant}, Course Name, University Name \hfill \years{2020--2021}
+\begin{itemize}[leftmargin=*]
+  \item Led weekly tutorials for ~30 undergraduate students.
+  \item Designed assignments and graded coursework.
+\end{itemize}
+
+% --- Publications ---
+\cvsection{Publications}
+(Use your citation style; chronological order, reverse-chronological order is common.)
+\begin{enumerate}[leftmargin=*]
+  \item Your Name, Coauthor. ``Title of Paper.'' \emph{Journal Name}, vol. X, pp. Y--Z, Year.
+  \item Your Name. ``Another Title.'' \emph{Conference Proceedings}, Year.
+\end{enumerate}
+
+% --- Awards & Fellowships ---
+\cvsection{Awards and Fellowships}
+\begin{itemize}[leftmargin=*]
+  \item Fellowship Name, Granting Organization \hfill \years{2023--2024}
+  \item Best Paper Award, Conference Name \hfill \years{2022}
+\end{itemize}
+
+% --- Service & Outreach ---
+\cvsection{Service and Outreach}
+\begin{itemize}[leftmargin=*]
+  \item Reviewer for journals: Journal A, Journal B.
+  \item Organizer, Graduate Student Seminar Series, University Name.
+  \item Outreach volunteer, STEM programs for high school students.
+\end{itemize}
+
+% --- References ---
+\cvsection{References}
+Available upon request. (Or list 2--3 referees with title, affiliation, and contact info.)
+
+\end{document}
+
