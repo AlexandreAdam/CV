@@ -1,0 +1,106 @@
+% =============================
+% Industry CV Template (LaTeX)
+% Adapted for Non-Academic Applications
+% =============================
+
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+% --- Section formatting ---
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.2ex plus .2ex}{0.8ex}
+
+% --- Custom commands ---
+\newcommand{\cvsection}[1]{\section*{#1}}
+\newcommand{\years}[1]{\textit{#1}}
+
+% =============================
+\begin{document}
+
+% --- Header ---
+\input{sections/header.tex}
+
+% --- Professional Summary ---
+\cvsection{Professional Summary}
+Researcher transitioning into industry with expertise in deep learning and statistical modeling.
+Proven record of publishing in top journals and cross-domain collaboration (see \href{https://scholar.google.com/citations?user=Mmlh_CEAAAAJ&hl=en}{google scholar}).
+Experienced in presenting to technical audiences.
+
+% --- Skills ---
+\cvsection{Technical Skills}
+\input{sections/technical_skills.tex}
+
+% --- Work Experience ---
+\cvsection{Work Experience}
+
+%\cventry{2018}{Data Science Internship}{Intact Insurance}{}{}{}
+%% {Development of machine learning tools for record linkage.}
+%\cventry{2019}{AI Engineer Internship}{Intact Insurance}{}{}{}
+
+%\textbf{Data Scientist (Intern)}, Company Name, City \hfill \years{Summer 2023} \\
+%\begin{itemize}[leftmargin=*]
+  %\itemsep-0.5em 
+  %\item Built predictive models to improve customer retention, achieving a 15% improvement in accuracy.
+  %\item Automated data pipelines, reducing reporting time by 40%.
+%\end{itemize}
+
+\textbf{AI Engineer (Intern)}, Intact Insurance \hfill \years{Summer 2018} \\[-1.75em]
+\begin{itemize}[leftmargin=*]
+    \small 
+  \itemsep-0.5em 
+  %\item Developed machine learning solutions for record linkage
+\end{itemize}
+
+\textbf{Data Science (Intern)}, Intact Insurance \hfill \years{Summer 2019} \\[-1.75em]
+\begin{itemize}[leftmargin=*]
+    \small 
+  \itemsep-0.5em 
+  %\item Developed a recommender systems for call centers 
+  %\item Interpretability with Shapley values 
+\end{itemize}
+
+\textbf{Graduate Research Assistant}, Université de Montréal \hfill \years{2020--2026} \\[-1.75em]
+\begin{itemize}[leftmargin=*]
+    \small 
+  \itemsep-0.5em 
+  %\item Developed deep learning algorithms for high-dimensional bayesian inference in astronomy.
+  %\item Published 5 peer-reviewed articles and presented at international conferences (NeurIPS, ICML).
+  %\item Collaborated with interdisciplinary teams and mentored students
+\end{itemize}
+
+\textbf{Teaching Assistant}, Université de Montréal \hfill \years{2020--2025} \\[-1.75em]
+\begin{itemize}[leftmargin=*]
+    \small 
+  \itemsep-0.5em 
+  %\item Introduction to Python for physics undergraduates
+\end{itemize}
+
+\textbf{Tutor}, School Success \hfill \years{2018--2020} \\[-1em]
+
+\cvsection{Education}
+\input{sections/education.tex}
+
+% --- Projects ---
+\cvsection{Selected Projects}
+\input{sections/selected_projects_long.tex}
+%\input{sections/selected_projects_short.tex}
+
+% --- Awards ---
+\cvsection{Awards}
+\input{sections/awards.tex}
+
+% --- References ---
+\cvsection{References}
+Available upon request.
+
+\end{document}
+
