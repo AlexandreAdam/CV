@@ -7,6 +7,7 @@
 
 % --- Packages ---
 \usepackage[T1]{fontenc}
+\usepackage{etaremune}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{enumitem}
@@ -16,9 +17,30 @@
 \usepackage{parskip}
 \usepackage{fontawesome5} % for icons
 
+\usepackage{enumitem,tabularx,array}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X} % wrap + ragged-right
+% Helper macro: \presentation{Conference}{Year}{Title}{Type}
+\newcommand{\presentation}[4]{%
+  #1\hfill #2\\
+  \begin{tabularx}{\linewidth}{@{}Y >{\raggedleft\arraybackslash}p{0.26\linewidth}@{}}
+      \emph{#3} & \textsc{#4}\\[2em]
+  \end{tabularx}
+}
+
+% Force left text + year fully right on one line
+\newcommand{\cvline}[2]{%
+  \noindent\makebox[\linewidth]{#1\hfill \years{#2}}%
+}
+
+% Convenience: role/description line + consistent spacing controls
+\newlength{\cvsmallsep}\setlength{\cvsmallsep}{0.25em}
+\newlength{\cvbigsep}\setlength{\cvbigsep}{0.5em}
+\newcommand{\cvrole}[1]{\emph{#1}\par\vspace{\cvsmallsep}}
+
 % --- Section formatting ---
 \titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
 \titlespacing*{\section}{0pt}{1.2ex plus .2ex}{0.8ex}
+
 
 % --- Custom commands ---
 \newcommand{\cvsection}[1]{\section*{#1}}
@@ -35,16 +57,8 @@
 \cvsection{Education}
 \input{sections/education.tex}
 
-% --- Publications ---
-\cvsection{Peer-reviewed publications}
-\input{sections/publications.tex}
-
-% --- Conference Contributions ---
-\cvsection{Conference Contributions}
-\input{sections/presentations.tex}
-
 % --- Teaching and Work Experience ---
-\cvsection{Teaching and Work Experiences}
+\cvsection{Teaching and Mentoring}
 \input{sections/teachings.tex}
 
 % --- Awards & Fellowships ---
@@ -55,8 +69,18 @@
 \cvsection{Service and Outreach}
 \input{sections/academic_service.tex}
 
+% --- Conference Contributions ---
+\cvsection{Conference Contributions}
+\input{sections/presentations.tex}
+
+% --- Publications ---
+\cvsection{Peer-reviewed publications}
+\input{sections/publications.tex}
+
+
+
 % --- References ---
-\cvsection{References}
-\textbf{Laurence Perreault-Levasseur} (Ph.D. advisor), \textbf{Yashar Hezaveh} (Co-advisor), \textbf{Nikolay Malkin} (University of Edinburgh)
+%\cvsection{References}
+%\textbf{Laurence Perreault-Levasseur} (Ph.D. advisor), \textbf{Yashar Hezaveh} (Co-advisor), \textbf{Nikolay Malkin} (University of Edinburgh)
 
 \end{document}
