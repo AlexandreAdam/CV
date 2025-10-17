@@ -27,20 +27,9 @@
   \end{tabularx}
 }
 
-% Force left text + year fully right on one line
-\newcommand{\cvline}[2]{%
-  \noindent\makebox[\linewidth]{#1\hfill \years{#2}}%
-}
-
-% Convenience: role/description line + consistent spacing controls
-\newlength{\cvsmallsep}\setlength{\cvsmallsep}{0.25em}
-\newlength{\cvbigsep}\setlength{\cvbigsep}{0.5em}
-\newcommand{\cvrole}[1]{\emph{#1}\par\vspace{\cvsmallsep}}
-
 % --- Section formatting ---
 \titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
 \titlespacing*{\section}{0pt}{1.2ex plus .2ex}{0.8ex}
-
 
 % --- Custom commands ---
 \newcommand{\cvsection}[1]{\section*{#1}}
