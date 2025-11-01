@@ -1,0 +1,69 @@
+% =============================
+% Academic CV Template (LaTeX)
+% With horizontal rules below section titles
+% =============================
+
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[T1]{fontenc}
+\usepackage{etaremune}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{fontawesome5} % for icons
+
+\usepackage{enumitem,tabularx,array}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X} % wrap + ragged-right
+% Helper macro: \presentation{Conference}{Year}{Title}{Type}
+\newcommand{\presentation}[4]{%
+  #1\hfill #2\\
+  \begin{tabularx}{\linewidth}{@{}Y >{\raggedleft\arraybackslash}p{0.26\linewidth}@{}}
+      \emph{#3} & \textsc{#4}\\[2em]
+  \end{tabularx}
+}
+
+% --- Section formatting ---
+\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.2ex plus .2ex}{0.8ex}
+
+% --- Custom commands ---
+\newcommand{\cvsection}[1]{\section*{#1}}
+\newcommand{\cvsubsection}[1]{\subsection*{#1}}
+\newcommand{\years}[1]{\textit{#1}} % For year ranges
+
+% =============================
+\begin{document}
+
+% --- Header ---
+\input{sections/header_academic.tex}
+
+% --- Education ---
+\cvsection{Education}
+\input{sections/education.tex}
+
+% --- Teaching and Work Experience ---
+\cvsection{Teaching and Mentoring}
+\input{sections/teachings.tex}
+
+% --- Awards & Fellowships ---
+\cvsection{Awards and Fellowships}
+\input{sections/awards.tex}
+
+% --- Service & Outreach ---
+\cvsection{Service and Outreach}
+\input{sections/academic_service.tex}
+
+% --- Conference Contributions ---
+\cvsection{Conference Contributions}
+\input{sections/presentations.tex}
+
+% --- References ---
+%\cvsection{References}
+%\textbf{Laurence Perreault-Levasseur} (Ph.D. advisor), \textbf{Yashar Hezaveh} (Co-advisor), \textbf{Nikolay Malkin} (University of Edinburgh)
+
+\end{document}
